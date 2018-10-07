@@ -12,6 +12,7 @@
 		FA19B60B2169964000637E7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA19B6092169964000637E7C /* Main.storyboard */; };
 		FA19B60D2169964100637E7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA19B60C2169964100637E7C /* Assets.xcassets */; };
 		FA19B6102169964100637E7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA19B60E2169964100637E7C /* LaunchScreen.storyboard */; };
+		FA19B6182169DE7A00637E7C /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA19B6172169DE7A00637E7C /* SelectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FA19B60C2169964100637E7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA19B60F2169964100637E7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA19B6112169964100637E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA19B6172169DE7A00637E7C /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				FA19B6052169964000637E7C /* AppDelegate.swift */,
 				FA19B6072169964000637E7C /* ViewController.swift */,
+				FA19B6172169DE7A00637E7C /* SelectionViewController.swift */,
 				FA19B6092169964000637E7C /* Main.storyboard */,
 				FA19B60C2169964100637E7C /* Assets.xcassets */,
 				FA19B60E2169964100637E7C /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA19B6082169964000637E7C /* ViewController.swift in Sources */,
+				FA19B6182169DE7A00637E7C /* SelectionViewController.swift in Sources */,
 				FA19B6062169964000637E7C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

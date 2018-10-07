@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,128 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BasePage" id="BYZ-38-t0r" customClass="ViewController" customModule="IOS_Swift_DelegateProtocolPattern" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AWm-pd-WeN">
+                                <rect key="frame" x="67.5" y="119" width="240" height="429"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y5b-I4-bKg">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="129"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="Inz-ny-l4X"/>
+                                            <constraint firstAttribute="height" constant="129" id="Y2l-hL-VoG"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Scp-eK-lbO">
+                                        <rect key="frame" x="0.0" y="137" width="240" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="3xI-Y0-lDm"/>
+                                            <constraint firstAttribute="width" constant="240" id="OBL-0C-ynP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="USN-O8-hzh">
+                                        <rect key="frame" x="0.0" y="180" width="240" height="211"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaV-p4-HUC">
+                                        <rect key="frame" x="0.0" y="399" width="240" height="30"/>
+                                        <color key="backgroundColor" red="0.63907372129999995" green="0.94764936150000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="bSd-xe-1F5"/>
+                                            <constraint firstAttribute="width" constant="240" id="sse-ox-I7H"/>
+                                        </constraints>
+                                        <state key="normal" title="Go To Selection Page &gt;&gt;"/>
+                                        <connections>
+                                            <action selector="goAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wjR-v6-LoQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="AWm-pd-WeN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="99" id="Ktn-u7-3Dc"/>
+                            <constraint firstItem="AWm-pd-WeN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M1d-wP-4OY"/>
+                            <constraint firstItem="AWm-pd-WeN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gHJ-Gb-c8J"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="goBtn" destination="GaV-p4-HUC" id="Ngw-Mx-pya"/>
+                        <outlet property="imageView" destination="y5b-I4-bKg" id="diE-S3-O6r"/>
+                        <outlet property="textView" destination="USN-O8-hzh" id="i71-cb-HlH"/>
+                        <outlet property="titleView" destination="Scp-eK-lbO" id="hOj-Li-wQv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="40.799999999999997" y="25.637181409295355"/>
+        </scene>
+        <!--Selection View Controller-->
+        <scene sceneID="KgJ-EK-Zgv">
+            <objects>
+                <viewController storyboardIdentifier="SelectionPage" id="zOy-Oo-Np2" customClass="SelectionViewController" customModule="IOS_Swift_DelegateProtocolPattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Arm-OU-XJQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="hjG-PZ-Qxz">
+                                <rect key="frame" x="59.5" y="182.5" width="256" height="302"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make Your Slection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Il-m6-zRd">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4x-B5-2RX">
+                                        <rect key="frame" x="0.0" y="75" width="256" height="94"/>
+                                        <color key="backgroundColor" red="0.7137972065" green="0.9881622779" blue="0.7517314383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="256" id="2hf-aG-I4e"/>
+                                            <constraint firstAttribute="height" constant="94" id="bc5-cU-axg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                        <state key="normal" title="Apple"/>
+                                        <connections>
+                                            <action selector="appleAct:" destination="zOy-Oo-Np2" eventType="touchUpInside" id="GI3-vi-pXv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fz3-Hv-tI7">
+                                        <rect key="frame" x="0.0" y="208" width="256" height="94"/>
+                                        <color key="backgroundColor" red="0.9881622779" green="0.6568012663480316" blue="0.3363086024170418" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="256" id="gGa-vq-l4d"/>
+                                            <constraint firstAttribute="height" constant="94" id="qmC-m4-NYe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                        <state key="normal" title="Orange"/>
+                                        <connections>
+                                            <action selector="orangeAction:" destination="zOy-Oo-Np2" eventType="touchUpInside" id="C2S-Wg-wbU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hjG-PZ-Qxz" firstAttribute="centerX" secondItem="Arm-OU-XJQ" secondAttribute="centerX" id="cla-Ck-Wyd"/>
+                            <constraint firstItem="hjG-PZ-Qxz" firstAttribute="centerY" secondItem="Arm-OU-XJQ" secondAttribute="centerY" id="mdy-Oy-kvB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9yQ-aI-k4x"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gc8-sT-nJT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="780" y="25.637181409295355"/>
         </scene>
     </scenes>
 </document>

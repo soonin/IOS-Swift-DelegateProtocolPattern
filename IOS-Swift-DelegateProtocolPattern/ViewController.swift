@@ -10,11 +10,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var titleView: UILabel!
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var goBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        goBtn.layer.cornerRadius = goBtn.frame.size.height/2
+        
     }
 
+    @IBAction func goAct(_ sender: UIButton) {
+        let SelectionVC = storyboard?.instantiateViewController(withIdentifier: "SelectionPage") as! SelectionViewController
+        SelectionVC.selectionDelegate = self
+        present(SelectionVC,animated: true, completion: nil)
+    }
+    
+}
 
+extension ViewController: SelectionDelegate {
+    func didTapSelect(image: UIImage, name: String, description: String) {
+        imageView.image = image
+        titleView.text = name
+        textView.text = description
+    }
 }
 
